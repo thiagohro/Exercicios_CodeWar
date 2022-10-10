@@ -17,6 +17,7 @@ const test1 = [0,1,0,1,0];
 //Arrays(2) for test function
 const test2 = [1,2,2,3,3,3,4,3,3,3,2,2,1];
 
+
 function findOdd(x) {
     let count = 0;
     let arr = x.sort((a, b) => a - b);
