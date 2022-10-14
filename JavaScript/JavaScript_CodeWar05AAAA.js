@@ -16,9 +16,9 @@ function aoQuadrado(n){
     //console.log('D: 4',typeof f);    
     for (i=0; i< f.length; i++)
     {   
-        var resx = [];
+        let resx = [];
         res = f[i]*f[i];
-        resx.push(res);
+        resx[i] = res;
         resz = [f[i]*f[i]];        
         //console.log(i)
         console.log('AQUI 1', resz)
@@ -38,3 +38,7 @@ function aoQuadrado(n){
 
 
 console.log(aoQuadrado(9119));
+
+
+
+//https://www.codewars.com/kata/546e2562b03326a88e000020/train/javascript

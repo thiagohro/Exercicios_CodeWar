@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulção de Array 01 no console log</title>
+    <script>src="JS_Array01.js"</script>
+</head>
+<body>
+    <h1>Manipulção de Array 01 no console log</h1></br>
+
+    <button id="btn01">Imprime Vertor Normal</button></br>
+    
+
+    <script>
+     document.getElementById("btn01").addEventListener("click", aoQuadrado);
+            
+        
+     function aoQuadrado(n){
+
+let f = '';
+//console.log('VAL AAAA 1: ',f);
+//console.log('AAAA: 2',typeof f);
+f = f + n;
+//console.log('VAL DDDD: 3',f);
+//console.log('D: 4',typeof f);    
+for (i=0; i< f.length; i++)
+{   
+    let resx = [];
+    res = f[i]*f[i];
+    resx[i] = res;
+    resz = [f[i]*f[i]];        
+    //console.log(i)
+    console.log('AQUI 1', resz)
+    console.log('AQUI 2', res)
+    console.log('AQUI 3', resx)
+    //for (x=0; x < res.length; x++)
+    //{
+    //console.log(res[x]);
+    //}
+    //console.log(f[i]);
+    //console.log(i);
+}
+
+console.log('resultado: ', resz);
+      
+}
+
+
+console.log(aoQuadrado(9119));
+
+</script>
+</body>
+</html>
