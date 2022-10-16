@@ -11,24 +11,25 @@ divisors(25); // should return [5]
 divisors(13); // should return "13 is prime"
 */
 
-function divisors(x) {
-  var result = [];
-  for (var a = 2; a*a <= x; ++a) {
-    if (x%a == 0) {
-      var b = x/a;
-      result.push(a);
-      if (b != a) {
-        result.push(b);
-      }
+function divisors(integer){ 
+  if(integer > 3 && integer !== 5){
+    if(integer % 2 === 0){      
+      resulDois = integer / 2
+      console.log('Não é primo!');
+      console.log('Resultado : ', resulDois);           
     }
+    else if (integer % 3 === 0){
+      resulDois = integer / 3
+      console.log('Não é primo!');
+      console.log('Resultado : ', resulDois);
+    }
+    else{
+      console.log('COND 02 É PRIMO!')
+    }    
   }
-  if (result.length == 0) {
-    return x+' is prime';
+  else{
+    console.log('COND 1 É PRIMO');
   }
-  result.sort(function (a, b) {
-    return a - b;
-  });
-  return result;
-};
+}
+divisors(9);
 
-console.log(divisors(12))

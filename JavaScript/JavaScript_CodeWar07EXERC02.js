@@ -14,11 +14,24 @@ divisors(13); // should return "13 is prime"
 function divisors(x) {
   var result = [];
   for (var a = 2; a*a <= x; ++a) {
+    console.log('------------- FOR COMEÇA ----------------')
+    console.log('Começa com o 2 e testa se (A) * (A) é menor que X e se for vai para o IF e depois ++1!');
+    console.log('A conta ', a, '(A) * ' ,a ,'(A) =', a*a ,'menor ou igual a X = ', x);
+    console.log('------------- FOR TERMINA ----------------')
     if (x%a == 0) {
+      console.log('------------- IF 01 COMEÇA ----------------');
+      console.log('Aqui começa o teste do resto da divisão x/a');
+      var c = x%a;
       var b = x/a;
+      console.log('Variavel B = ', '(X)', x, 'dividido / ', 'A', a, 'Resultado B = ', b ,'E o resto é: ', c)
       result.push(a);
+      console.log('RESULTADO DO PUSH (A): ',result.push(a));
+      console.log('------------- IF 01 TERMINA ----------------');
       if (b != a) {
+        console.log('AAAA', a)
+        console.log('BBBB', b)
         result.push(b);
+        console.log('RESULTADO DO PUSH (B): ',result.push(a));
       }
     }
   }
