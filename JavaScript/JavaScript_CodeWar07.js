@@ -11,24 +11,24 @@ divisors(25); // should return [5]
 divisors(13); // should return "13 is prime"
 */
 
-function divisors(x) {
-  var result = [];
-  for (var a = 2; a*a <= x; ++a) {
-    if (x%a == 0) {
-      var b = x/a;
-      result.push(a);
-      if (b != a) {
-        result.push(b);
-      }
-    }
+function divisors(integer) {
+  //criação do array para pegar os dados
+  //create array to get data
+  var res = []
+  //
+  //for (let i = 2; i <= Math.floor(integer / 2); ++i){
+  for (let i = 2; i <= Math.floor(integer / 2); ++i){
+  //Se integer resto da divisão por I for 0 entao
+  //If Integer rest of division by i is 0 then
+  if (integer % i == 0){ 
+  //Então o método push adciona ao nosso vetor res o valor de I
+  //Then the push métod add to our array res the value of I
+  res.push(i);
   }
-  if (result.length == 0) {
-    return x+' is prime';
   }
-  result.sort(function (a, b) {
-    return a - b;
-  });
-  return result;
+  //Aqui imprime se o valor for primo que cai na else condition
+  //Here shows the prime value that dropped on else condition
+  return res.length ? res : integer + ' is prime'
 };
 
-console.log(divisors(12))
+console.log(divisors(20));
