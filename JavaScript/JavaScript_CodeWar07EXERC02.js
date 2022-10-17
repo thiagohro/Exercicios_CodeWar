@@ -11,37 +11,29 @@ divisors(25); // should return [5]
 divisors(13); // should return "13 is prime"
 */
 
-function divisors(x) {
-  var result = [];
-  for (var a = 2; a*a <= x; ++a) {
-    console.log('------------- FOR COMEÇA ----------------')
-    console.log('Começa com o 2 e testa se (A) * (A) é menor que X e se for vai para o IF e depois ++1!');
-    console.log('A conta ', a, '(A) * ' ,a ,'(A) =', a*a ,'menor ou igual a X = ', x);
-    console.log('------------- FOR TERMINA ----------------')
-    if (x%a == 0) {
-      console.log('------------- IF 01 COMEÇA ----------------');
-      console.log('Aqui começa o teste do resto da divisão x/a');
-      var c = x%a;
-      var b = x/a;
-      console.log('Variavel B = ', '(X)', x, 'dividido / ', 'A', a, 'Resultado B = ', b ,'E o resto é: ', c)
-      result.push(a);
-      console.log('RESULTADO DO PUSH (A): ',result.push(a));
-      console.log('------------- IF 01 TERMINA ----------------');
-      if (b != a) {
-        console.log('AAAA', a)
-        console.log('BBBB', b)
-        result.push(b);
-        console.log('RESULTADO DO PUSH (B): ',result.push(a));
+function divisors(integer) {
+  var i=0, arr = [];
+  if(integer % 2 === 0 || integer % 3 === 0){
+    for(n=2; n<Math.ceil(Math.sqrt(integer)); n++) {
+    console.log('o primeiro valor de N: ',n);
+    console.log('o primeiro valor de Integer: ', Math.ceil(integer))
+    console.log('o primeiro valor de MathSqrt: ', Math.sqrt(integer))
+    console.log('o primeiro valor de MathCeil(MathSqrt): ', Math.ceil(Math.sqrt(integer)))
+      if(integer%n==0){
+        console.log('IF (Integer = ', integer, 'resto da divisao %', 'N = ', n, 'Igual a == 0', 'Resultaddo disso = ', integer%n)
+        console.log('Arr splice = ', i, 0, n);
+        arr.splice(i,0,n);          
+          if(integer/n!=Math.sqrt(integer)) arr.splice(i+1,0,integer/n);
+          console.log('No Segundo (IF) (SE) (Integer)', '(', integer, ')', '(dividido) (/) ', '(N)', '(', n, ')')
+          console.log('For (diferente) de (!=) de (MathSqrt(Integer)',  Math.sqrt(integer))
+          console.log('O array splice vai receber: ', 'sendo (i+1)','(', i+1, ')' ,'(Integer)', '(', integer, ')', '/', '(N)', '(', n, ')' );
+          i++;
       }
-    }
   }
-  if (result.length == 0) {
-    return x+' is prime';
-  }
-  result.sort(function (a, b) {
-    return a - b;
-  });
-  return result;
+  
+  return (arr.length!=0)? arr : integer + " is prime";
+}
+console.log('PRIMO')
 };
 
-console.log(divisors(12))
+console.log(divisors(133));
