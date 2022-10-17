@@ -15,8 +15,8 @@ function divisors(integer) {
   //criação do array para pegar os dados
   //create array to get data
   var res = []
-  //
-  //for (let i = 2; i <= Math.floor(integer / 2); ++i){
+  //Criação de for para testar os divisores sendo ele sempre vai testar a partir da metade. O que vai eliminar já a divisão por ele mesmo e não vai pegar numeros floats.
+  //Creating "for" to test the divisors. It will always test from the half, which will eliminate the division by itself and will not get float numbers.
   for (let i = 2; i <= Math.floor(integer / 2); ++i){
   //Se integer resto da divisão por I for 0 entao
   //If Integer rest of division by i is 0 then
