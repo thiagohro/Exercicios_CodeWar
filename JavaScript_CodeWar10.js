@@ -8,34 +8,33 @@ Examples:
 * 'abcdef' => ['ab', 'cd', 'ef']
 */
 
-
-//You can test here with your on data
 //Vc pode testar aqui com seus próprios dados
+//You can test here with your on data
 str = 'abcdef';
 
-//The function solution created to recive the parametrer from str
 //Função solução criada para receber cada parametro vindo de str
+//The function solution created to receive the parameter from str
 function solution(str){
   
     //Variavel criada para receber novos dados quando o resultado é diferente nos testes 
-    //Variable created to recive new data when the result is different on test
+    //Variable created to receive new data when the result is different on test
     let newStr = "";
     //verificação de tamanho do parametro
-    //check the parametrer lenth
+    //check the parameter length
     if(str.length){
         //testa se o tamanho do parametro resto da divisão é igual a 1
-        //test if parametrer length rest of division by 2 is equal 1
+        //test if parameter length rest of division by 2 is equal 1
         if(str.length % 2 === 1){
           //Se sim então o newStr recebe os dados de str adcionando _
           //if is it yes then newStr receive the data str ad _
           newStr = str + '_';
           //O retorno da newStr com o metodo match setando o .2 em casas que separa de 2 em 2
-          //The return of newStr with match method setting o .2 that show datas 2 by 2
+          //The return of newStr with match method setting .2 that show datas 2 by 2
           return newStr.match(/.{2}/g)
         }
         else{
            //Senão... Retorna o metodo match setando o .2 em casas que separa de 2 em 2
-          //Else... Return the match method setting o .2 that show datas 2 by 2
+          //Else... Return the match method setting .2 that show datas 2 by 2
           return str.match(/.{2}/g)
         }
     }
