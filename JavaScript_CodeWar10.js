@@ -9,20 +9,34 @@ Examples:
 */
 
 
-testVar = 'abcdef';
+//You can test here with your on data
+//Vc pode testar aqui com seus próprios dados
+str = 'abcdef';
 
-function solution(str) {
-  if (str.length == 0) {
-    return []
-  };
+//The function solution created to recive the parametrer from str
+//Função solução criada para receber cada parametro vindo de str
+function solution(str){
   
-  return str.match(/.{2}/g);
-}
+    //Variavel criada para receber novos dados quando o resultado é diferente nos testes 
+    //Variable created to recive new data when the result is different on test
+    let newStr = "";
+    //verificação de tamanho do parametro
+    //check the parametrer lenth
+    if(str.length){
+        //testa se o tamanho do parametro resto da divisão é igual a 1
+        //test if parametrer length rest of division by 2 is equal 1
+        if(str.length % 2 === 1){
+          
+          newStr = str + '_';
+          return newStr.match(/.{2}/g)
+        }
+        else{
+          return str.match(/.{2}/g)
+        }
+    }
+    else{
+      return [];
+    }
+  }
 
-
-solution(testVar)
-
-
-
-
-
+  console.log(solution(str))
